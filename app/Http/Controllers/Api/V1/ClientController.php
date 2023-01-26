@@ -1,12 +1,13 @@
 <?php
 
+namespace App\Http\Controllers\Api\V1;
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreAnimalRequest;
-use App\Http\Requests\UpdateAnimalRequest;
-use App\Models\Animal;
+use App\Http\Requests\StoreClientRequest;
+use App\Http\Requests\UpdateClientRequest;
+use App\Models\Client;
 
-class AnimalController extends Controller
+class ClientController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +16,7 @@ class AnimalController extends Controller
      */
     public function index()
     {
-        //
+        return Client::all();
     }
 
     /**
@@ -31,10 +32,10 @@ class AnimalController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreAnimalRequest  $request
+     * @param  \App\Http\Requests\StoreClientRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreAnimalRequest $request)
+    public function store(StoreClientRequest $request)
     {
         //
     }
@@ -42,10 +43,10 @@ class AnimalController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Animal  $animal
+     * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function show(Animal $animal)
+    public function show(Client $client)
     {
         //
     }
@@ -53,10 +54,10 @@ class AnimalController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Animal  $animal
+     * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function edit(Animal $animal)
+    public function edit(Client $client)
     {
         //
     }
@@ -64,11 +65,11 @@ class AnimalController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateAnimalRequest  $request
-     * @param  \App\Models\Animal  $animal
+     * @param  \App\Http\Requests\UpdateClientRequest  $request
+     * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateAnimalRequest $request, Animal $animal)
+    public function update(UpdateClientRequest $request, Client $client)
     {
         //
     }
@@ -76,10 +77,10 @@ class AnimalController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Animal  $animal
+     * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Animal $animal)
+    public function destroy(Client $client)
     {
         //
     }

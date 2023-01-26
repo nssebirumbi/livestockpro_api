@@ -1,12 +1,13 @@
 <?php
 
+namespace App\Http\Controllers\Api\V1;
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreProjectRequest;
-use App\Http\Requests\UpdateProjectRequest;
-use App\Models\Project;
+use App\Http\Requests\StoreAnimalRequest;
+use App\Http\Requests\UpdateAnimalRequest;
+use App\Models\Animal;
 
-class ProjectController extends Controller
+class AnimalController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +32,10 @@ class ProjectController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreProjectRequest  $request
+     * @param  \App\Http\Requests\StoreAnimalRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreProjectRequest $request)
+    public function store(StoreAnimalRequest $request)
     {
         //
     }
@@ -42,10 +43,10 @@ class ProjectController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Project  $project
+     * @param  \App\Models\Animal  $animal
      * @return \Illuminate\Http\Response
      */
-    public function show(Project $project)
+    public function show(Animal $animal)
     {
         //
     }
@@ -53,10 +54,10 @@ class ProjectController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Project  $project
+     * @param  \App\Models\Animal  $animal
      * @return \Illuminate\Http\Response
      */
-    public function edit(Project $project)
+    public function edit(Animal $animal)
     {
         //
     }
@@ -64,11 +65,11 @@ class ProjectController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateProjectRequest  $request
-     * @param  \App\Models\Project  $project
+     * @param  \App\Http\Requests\UpdateAnimalRequest  $request
+     * @param  \App\Models\Animal  $animal
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateProjectRequest $request, Project $project)
+    public function update(UpdateAnimalRequest $request, Animal $animal)
     {
         //
     }
@@ -76,10 +77,10 @@ class ProjectController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Project  $project
+     * @param  \App\Models\Animal  $animal
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Project $project)
+    public function destroy(Animal $animal)
     {
         //
     }

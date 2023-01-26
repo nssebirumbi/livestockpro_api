@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Requests\StoreCageRequest;
-use App\Http\Requests\UpdateCageRequest;
-use App\Models\Cage;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreSettingRequest;
+use App\Http\Requests\UpdateSettingRequest;
+use App\Models\Setting;
 
-class CageController extends Controller
+class SettingController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +32,10 @@ class CageController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreCageRequest  $request
+     * @param  \App\Http\Requests\StoreSettingRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCageRequest $request)
+    public function store(StoreSettingRequest $request)
     {
         //
     }
@@ -42,10 +43,10 @@ class CageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Cage  $cage
+     * @param  \App\Models\Setting  $setting
      * @return \Illuminate\Http\Response
      */
-    public function show(Cage $cage)
+    public function show(Setting $setting)
     {
         //
     }
@@ -53,10 +54,10 @@ class CageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Cage  $cage
+     * @param  \App\Models\Setting  $setting
      * @return \Illuminate\Http\Response
      */
-    public function edit(Cage $cage)
+    public function edit(Setting $setting)
     {
         //
     }
@@ -64,11 +65,11 @@ class CageController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateCageRequest  $request
-     * @param  \App\Models\Cage  $cage
+     * @param  \App\Http\Requests\UpdateSettingRequest  $request
+     * @param  \App\Models\Setting  $setting
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCageRequest $request, Cage $cage)
+    public function update(UpdateSettingRequest $request, Setting $setting)
     {
         //
     }
@@ -76,10 +77,10 @@ class CageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Cage  $cage
+     * @param  \App\Models\Setting  $setting
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Cage $cage)
+    public function destroy(Setting $setting)
     {
         //
     }

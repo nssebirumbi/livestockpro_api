@@ -1,12 +1,13 @@
 <?php
 
+namespace App\Http\Controllers\Api\V1;
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreStageRequest;
-use App\Http\Requests\UpdateStageRequest;
-use App\Models\Stage;
+use App\Http\Requests\StoreCageRequest;
+use App\Http\Requests\UpdateCageRequest;
+use App\Models\Cage;
 
-class StageController extends Controller
+class CageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +32,10 @@ class StageController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreStageRequest  $request
+     * @param  \App\Http\Requests\StoreCageRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreStageRequest $request)
+    public function store(StoreCageRequest $request)
     {
         //
     }
@@ -42,10 +43,10 @@ class StageController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Stage  $stage
+     * @param  \App\Models\Cage  $cage
      * @return \Illuminate\Http\Response
      */
-    public function show(Stage $stage)
+    public function show(Cage $cage)
     {
         //
     }
@@ -53,10 +54,10 @@ class StageController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Stage  $stage
+     * @param  \App\Models\Cage  $cage
      * @return \Illuminate\Http\Response
      */
-    public function edit(Stage $stage)
+    public function edit(Cage $cage)
     {
         //
     }
@@ -64,11 +65,11 @@ class StageController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateStageRequest  $request
-     * @param  \App\Models\Stage  $stage
+     * @param  \App\Http\Requests\UpdateCageRequest  $request
+     * @param  \App\Models\Cage  $cage
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateStageRequest $request, Stage $stage)
+    public function update(UpdateCageRequest $request, Cage $cage)
     {
         //
     }
@@ -76,10 +77,10 @@ class StageController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Stage  $stage
+     * @param  \App\Models\Cage  $cage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Stage $stage)
+    public function destroy(Cage $cage)
     {
         //
     }

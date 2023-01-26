@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Requests\StoreEventRequest;
-use App\Http\Requests\UpdateEventRequest;
-use App\Models\Event;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreStageRequest;
+use App\Http\Requests\UpdateStageRequest;
+use App\Models\Stage;
 
-class EventController extends Controller
+class StageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +32,10 @@ class EventController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreEventRequest  $request
+     * @param  \App\Http\Requests\StoreStageRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreEventRequest $request)
+    public function store(StoreStageRequest $request)
     {
         //
     }
@@ -42,10 +43,10 @@ class EventController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\Stage  $stage
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show(Stage $stage)
     {
         //
     }
@@ -53,10 +54,10 @@ class EventController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\Stage  $stage
      * @return \Illuminate\Http\Response
      */
-    public function edit(Event $event)
+    public function edit(Stage $stage)
     {
         //
     }
@@ -64,11 +65,11 @@ class EventController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateEventRequest  $request
-     * @param  \App\Models\Event  $event
+     * @param  \App\Http\Requests\UpdateStageRequest  $request
+     * @param  \App\Models\Stage  $stage
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateEventRequest $request, Event $event)
+    public function update(UpdateStageRequest $request, Stage $stage)
     {
         //
     }
@@ -76,10 +77,10 @@ class EventController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Event  $event
+     * @param  \App\Models\Stage  $stage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Event $event)
+    public function destroy(Stage $stage)
     {
         //
     }
