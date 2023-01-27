@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Farm;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -21,6 +22,8 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->boolean('is_admin');
+            $table->foreignIdFor(Farm::class)->constrained()->onDelete('cascade');
         });
     }
 

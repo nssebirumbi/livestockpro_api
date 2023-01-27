@@ -28,7 +28,6 @@ class FarmFactory extends Factory
             'zip' => $this->faker->postcode(),
             'country' => $this->faker->country(),
             'logo' => $this->faker->filePath(),
-            'client_id' => Client::factory()
         ];
     }
 }

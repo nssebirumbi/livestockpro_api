@@ -16,7 +16,8 @@ class ProjectSeeder extends Seeder
     public function run()
     {
         Project::factory()
-            ->count(100)
+            ->count(2)
+            ->forFarm(5)
             ->hasSettings(10)
             ->hasStages(4)
             ->hasStatuses(6)

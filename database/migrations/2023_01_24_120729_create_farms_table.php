@@ -25,7 +25,6 @@ return new class extends Migration
             $table->string('zip')->nullable();
             $table->string('country')->nullable();
             $table->string('logo')->nullable();
-            $table->foreignIdFor(Client::class)->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

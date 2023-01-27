@@ -10,8 +10,8 @@ class Project extends Model
 {
     use HasFactory;
 
-    public function farms(){
-        return $this->belongsToMany(Farm::class);
+    public function farm(){
+        return $this->belongsTo(Farm::class);
     }
 
     public function settings(){

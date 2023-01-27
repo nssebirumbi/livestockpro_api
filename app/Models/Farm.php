@@ -10,10 +10,10 @@ class Farm extends Model
     use HasFactory;
 
     public function projects(){
-        return $this->belongsToMany(Project::class);
+        return $this->hasMany(Project::class);
     }
 
-    public function client(){
-        return $this->belongsTo(Client::class);
+    public function clients(){
+        return $this->hasMany(Client::class);
     }
 }
