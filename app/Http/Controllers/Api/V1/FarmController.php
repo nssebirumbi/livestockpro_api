@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreFarmRequest;
 use App\Http\Requests\UpdateFarmRequest;
+use App\Http\Resources\FarmCollection;
+use App\Http\Resources\FarmResource;
 use App\Models\Farm;
 
 class FarmController extends Controller
@@ -16,7 +18,7 @@ class FarmController extends Controller
      */
     public function index()
     {
-        //
+        return new FarmCollection(Farm::paginate());
     }
 
     /**
@@ -48,7 +50,7 @@ class FarmController extends Controller
      */
     public function show(Farm $farm)
     {
-        //
+        return new FarmResource($farm);
     }
 
     /**

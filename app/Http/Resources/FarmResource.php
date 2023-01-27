@@ -14,6 +14,17 @@ class FarmResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'name' => $this->name,
+            'city' => $this->city,
+            'address' => $this->address,
+            'email' => $this->email,
+            'contact' => $this->contact,
+            'website' => $this->website,
+            'zip' => $this->zip,
+            'country' => $this->country,
+            'logo' => $this->logo,
+            'client_id' => $this->client_id
+        ];
     }
 }
