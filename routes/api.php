@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\ClientController;
+use App\Http\Controllers\Api\V1\FarmController;
+use App\Http\Controllers\Api\V1\ClientController;
 use App\Models\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,9 +21,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/clients',[ClientControllercd::class, 'index']);
-// Route::group(function(){
-//     Route::apiResource('clients',Client::class);
-//     Route::apiResource('farms',Client::class);
-// });
+Route::group(['prefix'=>'v1', 'namespace'=>'App\Http\Controllers\Api\V1'], function(){
+    Route::apiResource('clients',ClientController::class);
+    Route::apiResource('farms',FarmController::class);
+});
     

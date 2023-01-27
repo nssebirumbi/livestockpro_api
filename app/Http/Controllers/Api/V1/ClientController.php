@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\Api\V1;
-namespace App\Http\Controllers;
+
 
 use App\Http\Requests\StoreClientRequest;
 use App\Http\Requests\UpdateClientRequest;
 use App\Models\Client;
+use App\Http\Controllers\Controller;
+use App\Http\Resources\ClientResource;
 
 class ClientController extends Controller
 {
@@ -48,7 +50,7 @@ class ClientController extends Controller
      */
     public function show(Client $client)
     {
-        //
+        return new ClientResource($client);
     }
 
     /**

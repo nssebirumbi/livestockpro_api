@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Api\V1;
-namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCageRequest;
 use App\Http\Requests\UpdateCageRequest;
 use App\Models\Cage;
