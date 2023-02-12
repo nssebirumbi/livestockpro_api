@@ -8,6 +8,7 @@ use App\Models\Animal;
 use App\Models\Client;
 use App\Models\Farm;
 use App\Models\Project;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -26,17 +27,25 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        // $this->call([
-        //     // ClientSeeder::class,
-        //     // ProjectSeeder::class,
-        //     FarmSeeder::class,
-        //     // ProjectSeeder::class
-        // ]);
+
+        
+
+        $this->call([
+            RoleSeeder::class
+        ]);
+        
+
+        User::create([
+            'name' => 'nicholaws',
+            'email' => 'nicholaws2@gmail.com',
+            'email_verified_at' => now(),
+            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        ])->assignRole('owner', 'worker');
 
         Client::factory(3)->has(
             Farm::factory()->has(
                 Project::factory()->has(
-                    Animal::factory()->count(5)
+                    Animal::factory()->count(4)
                 )->count(2)
             )->count(1)
         )->create();

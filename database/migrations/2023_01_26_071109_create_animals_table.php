@@ -31,7 +31,7 @@ return new class extends Migration
             $table->integer('legs')->nullable();
             $table->string('sex')->nullable();
             $table->date('entry_date')->nullable();
-            $table->foreignIdFor(Project::class);
+            $table->foreignIdFor(Project::class)->nullable();
             $table->foreignIdFor(Stage::class)->nullable();
             $table->foreignIdFor(Status::class)->nullable();
             $table->foreignIdFor(Cage::class)->nullable();

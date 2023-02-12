@@ -20,8 +20,7 @@ class StatusFactory extends Factory
         return [
             'name'=>$this->faker->streetName(),
             'description'=>$this->faker->text(),
-            'sex'=>$this->faker->randomElement(['M','F']),
-            'project_id'=>Project::factory()
+            'sex'=>$this->faker->randomElement(['M','F'])
         ];
     }
 }
