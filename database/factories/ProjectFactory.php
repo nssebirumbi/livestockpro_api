@@ -20,8 +20,8 @@ class ProjectFactory extends Factory
         $type = $this->faker->randomElement(['R', 'P', 'C', 'G']);
         return [
             'name'=>$this->faker->company(),
-            'type'=>$type,
-            'farm_id'=>Farm::factory()
+            'type'=>$type
+            // 'farm_id'=>Farm::factory()
         ];
     }
 }

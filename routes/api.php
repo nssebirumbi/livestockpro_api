@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\V1\AnimalController;
 use App\Http\Controllers\Api\V1\FarmController;
 use App\Http\Controllers\Api\V1\ClientController;
 use App\Http\Controllers\Api\V1\ProjectController;
@@ -26,5 +27,6 @@ Route::group(['prefix'=>'v1', 'namespace'=>'App\Http\Controllers\Api\V1'], funct
     Route::apiResource('clients',ClientController::class);
     Route::apiResource('farms',FarmController::class);
     Route::apiResource('projects',ProjectController::class);
+    Route::apiResource('animals',AnimalController::class);
 });
     

@@ -23,7 +23,7 @@ return new class extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->boolean('is_admin');
-            $table->foreignIdFor(Farm::class)->constrained()->onDelete('cascade');
+            // $table->foreignIdFor(Farm::class)->constrained()->onDelete('cascade');
         });
     }
 

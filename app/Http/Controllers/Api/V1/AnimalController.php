@@ -6,6 +6,8 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreAnimalRequest;
 use App\Http\Requests\UpdateAnimalRequest;
+use App\Http\Resources\AnimalCollection;
+use App\Http\Resources\AnimalResource;
 use App\Models\Animal;
 
 class AnimalController extends Controller
@@ -17,7 +19,7 @@ class AnimalController extends Controller
      */
     public function index()
     {
-        //
+        return new AnimalCollection(Animal::paginate());
     }
 
     /**
@@ -49,7 +51,7 @@ class AnimalController extends Controller
      */
     public function show(Animal $animal)
     {
-        //
+        return new AnimalResource($animal);
     }
 
     /**

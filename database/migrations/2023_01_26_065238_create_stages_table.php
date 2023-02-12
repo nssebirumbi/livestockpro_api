@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('sex');
-            $table->foreignIdFor(Project::class);
+            $table->foreignIdFor(Project::class)->nullable();
             $table->timestamps();
         });
     }

@@ -9,8 +9,8 @@ class Client extends Model
 {
     use HasFactory;
 
-    public function farm(){
-        return $this->belongsTo(Farm::class);
+    public function farms(){
+        return $this->hasMany(Farm::class);
     }
 
     // public function projects(){

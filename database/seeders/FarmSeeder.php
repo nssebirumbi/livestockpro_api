@@ -35,8 +35,7 @@ class FarmSeeder extends Seeder
         Farm::factory()
         ->count(3)
         ->hasClients(1, [
-            'is_admin' => true,
-            'is_admin' => false
+            'is_admin' => true
         ])
         ->hasProjects(2)
         ->create();

@@ -13,7 +13,7 @@ class Farm extends Model
         return $this->hasMany(Project::class);
     }
 
-    public function clients(){
-        return $this->hasMany(Client::class);
-    }
+    // public function clients(){
+    //     return $this->hasMany(Client::class);
+    // }
 }

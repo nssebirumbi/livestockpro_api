@@ -32,11 +32,11 @@ class AnimalFactory extends Factory
             'breed'=>$this->faker->colorName(),
             'legs'=>$this->faker->randomNumber(),
             'sex'=>$this->faker->randomElement(['M','F']),
-            'entry_date'=>$this->faker->dateTimeThisDecade(),
-            'project_id'=>Project::factory(),
-            'stage_id'=>Stage::factory(),
-            'status_id'=>Status::factory(),
-            'cage_id'=>Cage::factory()
+            'entry_date'=>$this->faker->dateTimeThisDecade()
+            // 'project_id'=>Project::factory(),
+            // 'stage_id'=>Stage::factory(),
+            // 'status_id'=>Status::factory(),
+            // 'cage_id'=>Cage::factory()
         ];
     }
 }

@@ -32,9 +32,9 @@ return new class extends Migration
             $table->string('sex')->nullable();
             $table->date('entry_date')->nullable();
             $table->foreignIdFor(Project::class);
-            $table->foreignIdFor(Stage::class);
-            $table->foreignIdFor(Status::class);
-            $table->foreignIdFor(Cage::class);
+            $table->foreignIdFor(Stage::class)->nullable();
+            $table->foreignIdFor(Status::class)->nullable();
+            $table->foreignIdFor(Cage::class)->nullable();
             $table->timestamps();
         });
     }
